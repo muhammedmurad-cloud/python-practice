@@ -1,0 +1,11 @@
+class CoffeeMachine:
+    def __init__(self,water,coffee,milk):
+        self.water = water
+        self.coffee = coffee
+        self.milk = milk
+    def make_latte(self):
+        return "latte made" if self.water >= 200 and self.coffee >= 100 and self.milk >= 200 else "Resources aren't enough!"
+machine1 = CoffeeMachine(200,100,200)
+machine2 = CoffeeMachine(50,300,400)
+print(machine1.make_latte())
+print(machine2.make_latte()) 
