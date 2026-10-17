@@ -1,0 +1,13 @@
+class Vehicle:
+    def __init__(self,name,max_speed):
+        self.name = name
+        self.max_speed = max_speed
+
+    def showing_capacity(self,capacity):
+        return f"Capacity:{capacity}"
+class Bus(Vehicle):
+    def showing_capacity(self):
+        return super().showing_capacity(50) 
+
+bus1 = Bus("School Bus",120)
+print(bus1.showing_capacity())
