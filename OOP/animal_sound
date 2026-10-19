@@ -1,0 +1,8 @@
+class Animal:
+    def __init__(self,sound):
+        self.sound = sound
+class cat(Animal):
+    def __init__(self):
+        super().__init__("meow")
+my_cat = cat()
+print(my_cat.sound)  
