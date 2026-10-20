@@ -1,0 +1,23 @@
+class Employee:
+    def __init__(self,name):
+        self.name = name
+    def calculate_pay(self):
+        return 0 
+class FullTimeEmployee(Employee):
+    def __init__(self,name,annual_salary):
+        self.annual_salary = annual_salary
+        super().__init__(name)
+    def calculate_pay(self):
+        return self.annual_salary / 12
+class PartTimeEmployee(Employee):
+    def __init__(self,name,hourly_rate,hours_worked):
+        super().__init__(name)
+        self.hourly_rate = hourly_rate
+        self.hours_worked = hours_worked
+    def calculate_pay(self):
+        return self.hourly_rate * self.hours_worked
+ft = FullTimeEmployee("Muhammed",60000) 
+pt = PartTimeEmployee("Tofiq",500,20)
+
+print(ft.calculate_pay())
+print(pt.calculate_pay())
