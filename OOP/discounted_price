@@ -1,0 +1,14 @@
+class Order:
+    def __init__(self,total,order_id):
+        self.total = total
+        self.order_id = order_id
+    def get_total(self):
+        return self.total
+class DiscountedOrder(Order):
+    def __init__(self,total,order_id):
+        super().__init__(total,order_id)
+    def get_total(self):
+        return  self.total * 0.90
+        
+order = DiscountedOrder(1200,"0RD001")
+print(f"Order ID:{order.order_id} | Original Total:{order.total} | Discounted Total:{order.get_total()}")                
